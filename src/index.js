@@ -1,8 +1,8 @@
+import './styles.css';
 import menuCardTpl from './templates/menu-card.hbs';
 import menu from './menu.json';
-// import './sass/main.scss';
-// import './styles.css'
 
+// import './sass/main.scss'
 
 const menuMarkup = createMenuMarkup(menu);
 
@@ -12,8 +12,6 @@ function createMenuMarkup(menu){
 
 
 const menuParentEl = document.querySelector(".menu");
-
-
 menuParentEl.insertAdjacentHTML("afterend", menuMarkup);
 
 const Theme = {
@@ -28,7 +26,7 @@ const actualTheme = localStorage.getItem('Theme');
 
 
 function checkActualTheme(){ 
-  // const actualTheme = localStorage.getItem('Theme');
+ 
   if(!actualTheme){
     body.classList.add(Theme.LIGHT);
     localStorage.setItem('Theme', 'LIGHT');
@@ -51,8 +49,6 @@ function CheckCheckboxOn(){
 
 themeSwitchEl.addEventListener('change', onThemeSwitchElCLick);
 
-
-
   function onThemeSwitchElCLick(evt){ 
     evt.preventDefault();
 
@@ -63,8 +59,7 @@ themeSwitchEl.addEventListener('change', onThemeSwitchElCLick);
               localStorage.setItem('Theme', 'DARK');
             }
 
-else
-{
+  else{
           body.classList.remove(Theme.DARK),
           body.classList.add(Theme.LIGHT),
           localStorage.setItem('Theme', 'LIGHT');

@@ -53,7 +53,7 @@ themeSwitchEl.addEventListener('change', onThemeSwitchElCLick);
     evt.preventDefault();
 
   if(evt.target.checked){
-    console.log(evt.target.checked);
+    
               body.classList.remove(Theme.LIGHT),
               body.classList.add(Theme.DARK);
               localStorage.setItem('Theme', 'DARK');

@@ -12,7 +12,7 @@ function createMenuMarkup(menu){
 
 
 const menuParentEl = document.querySelector(".menu");
-menuParentEl.insertAdjacentHTML("afterend", menuMarkup);
+menuParentEl.insertAdjacentHTML("beforeend", menuMarkup);
 
 const Theme = {
     LIGHT: 'light-theme',

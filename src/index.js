@@ -1,4 +1,4 @@
-import './styles.css';
+// import './styles.css';
 import menuCardTpl from './templates/menu-card.hbs';
 import menu from './menu.json';
 
